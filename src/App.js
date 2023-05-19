@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Home from "./pages/Home";
+// import Sidebar from "./components/Sidebar";
+import Overlay from "./pages/Overlay";
 
-function App() {
+export default function App() {
+  const [sideBar, setsideBar] = useState(true);
+  const updatesideBar = () => {
+    setsideBar(!sideBar);
+  };
+  // useEffect(() => {
+  //   const handleSideBar = () => {
+  //     if (sideBar) updatesideBar();
+  //   };
+  //   document.addEventListener("mousedown", handleSideBar);
+  // });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Overlay state={sideBar} />
+      <Home updateSB={updatesideBar} id="dg" />;
     </div>
   );
 }
 
-export default App;
+// <Sidebar state={sideBar} />
