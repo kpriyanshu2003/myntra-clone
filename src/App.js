@@ -1,26 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-// import Sidebar from "./components/Sidebar";
-import Overlay from "./pages/Overlay";
+import Autosuggest from "./pages/Autosuggest";
+import Cart from "./pages/Cart";
+import Login from "./pages/Login";
+import GetHelp from "./pages/GetHelp";
 
 export default function App() {
-  const [sideBar, setsideBar] = useState(true);
-  const updatesideBar = () => {
-    setsideBar(!sideBar);
-  };
-  // useEffect(() => {
-  //   const handleSideBar = () => {
-  //     if (sideBar) updatesideBar();
-  //   };
-  //   document.addEventListener("mousedown", handleSideBar);
-  // });
-
   return (
-    <div>
-      <Overlay state={sideBar} />
-      <Home updateSB={updatesideBar} id="dg" />;
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/autosuggest" element={<Autosuggest />} />
+        <Route path="/checkout/cart" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/recovery" element={<GetHelp />} />
+      </Routes>
+    </Router>
   );
 }
-
-// <Sidebar state={sideBar} />

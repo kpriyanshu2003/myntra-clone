@@ -2,26 +2,39 @@ import login from "../images/sidebar-img.webp";
 import getApp from "../images/get-myntra-app.webp";
 import Wardrobe from "./sidebar/Wardrobe";
 import Options from "./sidebar/Options";
+import { Link } from "react-router-dom";
 
 export default function Sidebar(props) {
   return (
     <div
-      className={`lg:hidden absolute h-full
-      ${props.state ? "w-[75%]" : "w-0 hidden"}`}
+      className={`lg:hidden fixed h-full w-full ${
+        props.state ? "" : "hidden"
+      } bg-[rgb(0,0,0,0.5)]`}
     >
-      <div>
-        <img src={login} alt="" /> {/* Onclick goto login page */}
-      </div>
-      <div className="m-4">
-        <Wardrobe />
-        <div className="mt-4">
-          <hr className="w-full" />
+      <div
+        className={`h-full bg-white
+      ${props.state ? "w-[75%]" : "w-0"}
+      `}
+      >
+        <div className="relative">
+          <img src={login} alt="" /> {/* Onclick goto login page */}
+          <Link to="/login">
+            <span className="absolute uppercase text-[#FF3F6C] font-medium text-sm w-full bottom-8 text-center indent-20">
+              Sign Up, Login
+            </span>
+          </Link>
         </div>
-        <ul>
-          <Options />
-        </ul>
+        <div className="m-4">
+          <Wardrobe />
+          <div className="mt-4">
+            <hr className="w-full" />
+          </div>
+          <ul>
+            <Options />
+          </ul>
+        </div>
+        <img src={getApp} alt="" /> {/* Onclick goto login page */}
       </div>
-      <img src={getApp} alt="" /> {/* Onclick goto login page */}
     </div>
   );
 }

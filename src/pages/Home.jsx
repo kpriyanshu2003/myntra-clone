@@ -1,9 +1,27 @@
-import Navbar from "../components/Navbar";
+import { useState } from "react";
+import Navbar from "../components/DefNavbar";
+import Sidebar from "../components/Sidebar";
+import Wishlist from "../components/Wishlist";
 
 export default function Home(props) {
+  const [sideBar, setsideBar] = useState(true);
+  const [wishList, setwishList] = useState(false);
+
+  const updatesideBar = () => {
+    setsideBar(!sideBar);
+  };
+
+  const updatewishlist = () => {
+    setwishList(!wishList);
+  };
   return (
     <div className="">
-      <Navbar sideBar={() => props.updateSB()} />
+      <Sidebar state={sideBar} />
+      <Wishlist state={wishList} updateWL={() => updatewishlist()} />
+      <Navbar
+        updateSB={() => updatesideBar()}
+        updateWL={() => updatewishlist()}
+      />
     </div>
   );
 }
