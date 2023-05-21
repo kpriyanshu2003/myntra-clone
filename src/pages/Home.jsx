@@ -4,7 +4,7 @@ import Sidebar from "../components/Sidebar";
 import Wishlist from "../components/Wishlist";
 
 export default function Home(props) {
-  const [sideBar, setsideBar] = useState(true);
+  const [sideBar, setsideBar] = useState(false);
   const [wishList, setwishList] = useState(false);
 
   const updatesideBar = () => {
