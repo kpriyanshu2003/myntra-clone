@@ -11,6 +11,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/wishlist" element={<Home />} />
         <Route path="/autosuggest" element={<Autosuggest />} />
         <Route path="/checkout/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />

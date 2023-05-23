@@ -17,11 +17,11 @@ export default function Home(props) {
   return (
     <div className="">
       <Sidebar state={sideBar} />
-      <Wishlist state={wishList} updateWL={() => updatewishlist()} />
       <Navbar
         updateSB={() => updatesideBar()}
         updateWL={() => updatewishlist()}
       />
+      <Wishlist state={wishList} updateWL={() => updatewishlist()} />
     </div>
   );
 }

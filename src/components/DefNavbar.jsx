@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   return (
-    <div className="shadow-sm">
+    <div className="shadow-md">
       <div className="p-4 lg:hidden flex items-center justify-between">
         <div className="flex items-center">
           <svg
@@ -85,6 +85,103 @@ export default function Navbar(props) {
                 d="M4.012 20.718L5.246 7.314H7.27v1.763a.733.733 0 101.466 0V7.314h6.528v1.763a.733.733 0 001.466 0V7.314h2.024l1.234 13.404H4.012zM12 3.282c1.56 0 2.865 1.1 3.187 2.565H8.813A3.268 3.268 0 0112 3.282zm8.15 3.228a.733.733 0 00-.73-.663h-2.747A4.734 4.734 0 0012 1.816a4.734 4.734 0 00-4.673 4.03H4.58a.733.733 0 00-.73.664L2.475 21.38a.734.734 0 00.73.804h17.59a.733.733 0 00.73-.803L20.15 6.51z"
               ></path>
             </svg>
+          </Link>
+        </div>
+      </div>
+
+      <div className="hidden lg:flex items-center justify-evenly h-20">
+        <Link to="/" className="w-14 h-14 pt-2 cursor-pointer">
+          <img src={Logo} alt="" />
+        </Link>
+        <div className="uppercase font-medium ml-10 text-sm">
+          <span className="mr-10 cursor-pointer">Men</span>
+          <span className="mr-10 cursor-pointer">Women</span>
+          <span className="mr-10 cursor-pointer">Kids</span>
+          <span className="mr-10 cursor-pointer">Home & Living</span>
+          <span className="mr-10 cursor-pointer">Beauty</span>
+          <span className="mr-10 cursor-pointer">Studio</span>
+        </div>
+        <div className="relative bg-[#F5F5F6] h-10 flex items-center w-2/6 px-3 rounded">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="#282C3F"
+            className="w-6 h-6 absolute"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
+          </svg>
+          <input
+            type="text"
+            placeholder="Search for products, brands and more"
+            className="indent-6 w-full outline-none ml-2 bg-transparent text-sm"
+          />
+        </div>
+        <div className="flex items-center font-medium text-sm">
+          {/* Profile Icon */}
+          <div className="grid place-items-center ml-5 cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+              />
+            </svg>
+            <span className="text-xs">Profile</span>
+          </div>
+          {/* WishList */}
+          <Link
+            to="/wishlist"
+            className="grid place-items-center ml-5 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+              />
+            </svg>
+            <span className="text-xs">Wishlist</span>
+          </Link>
+          {/* Cart */}
+          <Link
+            to="/checkout/cart"
+            className="grid place-items-center ml-5 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+              />
+            </svg>
+            <span className="text-xs">Bag</span>
           </Link>
         </div>
       </div>

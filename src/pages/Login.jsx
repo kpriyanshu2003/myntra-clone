@@ -1,8 +1,10 @@
 import Main from "../components/Login/Main";
+import Navbar from "../components/DefNavbar";
 
 export default function Login() {
   return (
     <div>
+      <Navbar />
       <Main />
     </div>
   );

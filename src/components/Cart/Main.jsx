@@ -12,7 +12,7 @@ export default function Main() {
         There is nothing in your bag. Let's add some items.
       </div>
       <Link to="/login" className="border border-[#FF3F6C] mt-6">
-        <button className="p-3 font-medium text-[#FF3F6C] text-sm">
+        <button className="p-3 font-bold text-[#FF3F6C] text-sm">
           ADD ITEMS FROM WISHLIST
         </button>
       </Link>
