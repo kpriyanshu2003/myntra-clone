@@ -1,0 +1,24 @@
+input[type="text"] {
+  caret-color: rgb(255, 36, 89);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.custom-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
