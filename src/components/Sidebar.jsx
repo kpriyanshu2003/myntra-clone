@@ -1,8 +1,9 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import login from "../images/sidebar-img.webp";
 import getApp from "../images/get-myntra-app.webp";
 import Wardrobe from "./Sidebar/Wardrobe";
 import Options from "./Sidebar/Options";
-import { Link } from "react-router-dom";
 
 export default function Sidebar(props) {
   return (

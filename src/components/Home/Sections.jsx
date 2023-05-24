@@ -1,3 +1,4 @@
+import React from "react";
 // Import for smartphone
 import Men from "../../images/home-mobile/men.webp";
 import Women from "../../images/home-mobile/women.webp";

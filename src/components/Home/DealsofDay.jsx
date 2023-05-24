@@ -1,3 +1,4 @@
+import React from "react";
 // Import for desktop - Deals of the Day
 import AccessoriesD from "../../images/home-desktop/dealday/accessories.webp";
 import CasualShoes from "../../images/home-desktop/dealday/casualshoes.webp";

@@ -1,3 +1,4 @@
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import wishlistA from "../images/wishlist.avif";
 import wishlistP from "../images/wishlist.png";

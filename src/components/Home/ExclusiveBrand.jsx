@@ -1,3 +1,4 @@
+import React from "react";
 // Import for desktop - Best of Myntra Exclusive Brands
 import StylePick from "../../images/home-desktop/exclusivebrand/stylish-picks.webp";
 import KurtaSets from "../../images/home-desktop/exclusivebrand/kurta-sets.webp";

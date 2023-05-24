@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import PlayStore from "../../images/googleplay.png";
 import AppStore from "../../images/appstore.png";
 import Facebook from "../../images/facebook.png";
@@ -6,7 +7,6 @@ import Youtube from "../../images/youtube.png";
 import Twitter from "../../images/twitter.png";
 import Original from "../../images/original.png";
 import Day14 from "../../images/14days.png";
-import { useState } from "react";
 
 export default function Footer() {
   const [more, setMore] = useState(true);

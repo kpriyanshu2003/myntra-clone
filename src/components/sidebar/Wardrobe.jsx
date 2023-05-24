@@ -1,9 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import menuData from "../Menu";
 export default function Choice() {
   const [unoOpen, setUnoOpen] = useState(false);
   const [dosOpen, setDosOpen] = useState(false);
-  // const [tresOpen, setTresOpen] = useState({state:falsem });
   const items = (
     <ul>
       {menuData.map((uno, index) => {

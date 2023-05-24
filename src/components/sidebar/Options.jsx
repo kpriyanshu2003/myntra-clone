@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Options() {
   const opt = [
     { label: "Myntra Studio", link: "#" },
