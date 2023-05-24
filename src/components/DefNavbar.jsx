@@ -5,7 +5,7 @@ export default function Navbar(props) {
   return (
     <div className="shadow-md">
       <div className="p-4 lg:hidden flex items-center justify-between">
-        <div className="flex items-center">
+        <Link to="/" className="flex items-center">
           <svg
             onClick={() => props.updateSB()}
             xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@ export default function Navbar(props) {
           <span className="ml-2">
             <img src={Logo} alt="" className="ml-3 w-10" />
           </span>
-        </div>
+        </Link>
         {/* Show the icons */}
         <div className="grid grid-rows-1 grid-cols-4 gap-4 h-6">
           {/* Install App */}
@@ -124,23 +124,25 @@ export default function Navbar(props) {
         </div>
         <div className="flex items-center font-medium text-sm">
           {/* Profile Icon */}
-          <div className="grid place-items-center ml-5 cursor-pointer">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-              />
-            </svg>
-            <span className="text-xs">Profile</span>
-          </div>
+          {props.profile && (
+            <div className="grid place-items-center ml-5 cursor-pointer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                />
+              </svg>
+              <span className="text-xs">Profile</span>
+            </div>
+          )}
           {/* WishList */}
           <Link
             to="/wishlist"

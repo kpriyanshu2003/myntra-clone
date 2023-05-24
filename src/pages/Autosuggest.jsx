@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../css/Autosuggest.css";
+import "../css/style.css";
 import { Link } from "react-router-dom";
 
 export default function Autosuggest() {

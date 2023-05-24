@@ -1,29 +1,41 @@
 import { useState } from "react";
-import menuData from "./Menu";
+import menuData from "../Menu";
 export default function Choice() {
   const [unoOpen, setUnoOpen] = useState(false);
   const [dosOpen, setDosOpen] = useState(false);
   // const [tresOpen, setTresOpen] = useState({state:falsem });
   const items = (
-    <ul className="cursor-pointer">
+    <ul>
       {menuData.map((uno, index) => {
         if (uno.items)
           return (
             <li key={index}>
-              <span onClick={() => setUnoOpen(!unoOpen)}>{uno.key}</span>
+              <span
+                onClick={() => setUnoOpen(!unoOpen)}
+                className="cursor-pointer"
+              >
+                {uno.key}
+              </span>
               {unoOpen && (
                 <ul key={index} className="ml-3">
                   {uno.items.map((dos, index) => {
                     if (dos.items)
                       return (
                         <li key={index}>
-                          <span onClick={() => setDosOpen(!dosOpen)}>
+                          <span
+                            onClick={() => setDosOpen(!dosOpen)}
+                            className="cursor-pointer"
+                          >
                             {dos.key}
                           </span>
                           {dosOpen && (
                             <ul key={index} className="ml-3">
                               {dos.items.map((tres, index) => {
-                                return <li key={index}>{tres.key}</li>;
+                                return (
+                                  <li key={index} className="cursor-pointer">
+                                    {tres.key}
+                                  </li>
+                                );
                               })}
                             </ul>
                           )}

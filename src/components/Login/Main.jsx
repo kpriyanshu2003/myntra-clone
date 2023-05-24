@@ -3,7 +3,7 @@ import img from "../../images/login-img.webp";
 
 export default function Main() {
   return (
-    <div className="grid place-items-center lg:pt-10  bg-blue-400 ">
+    <div className="grid place-items-center lg:pt-10  bg-[#FEEEF0] ">
       <div className=" lg:w-[28%] bg-white lg:pb-32 ">
         <div className="relative">
           <Link to="/" className="lg:hidden">

@@ -4,7 +4,7 @@ import Navbar from "../components/DefNavbar";
 export default function Login() {
   return (
     <div>
-      <Navbar />
+      <Navbar profile={false} />
       <Main />
     </div>
   );
